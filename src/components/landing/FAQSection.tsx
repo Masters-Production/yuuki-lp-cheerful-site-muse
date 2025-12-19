@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { HelpCircle } from "lucide-react";
 
 const faqs = [
   { question: "Când are loc webinarul?", answer: "Pe 25 decembrie 2025, între orele 19:00 și 21:00. Durează aproximativ 2 ore și este complet LIVE." },
@@ -10,18 +11,45 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="relative py-24 md:py-32 px-4 md:px-8 overflow-hidden">
+    <section className="relative py-28 md:py-36 px-4 md:px-8 bg-gradient-to-b from-background via-card to-background overflow-hidden">
+      {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
       </div>
-      <div className="max-w-3xl mx-auto relative z-10">
-        <h2 className="text-3xl md:text-5xl font-black text-center mb-16 leading-tight">Întrebări <span className="text-primary">frecvente</span></h2>
-        <Accordion type="single" collapsible className="space-y-4">
+
+      <div className="max-w-4xl mx-auto relative z-10">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <HelpCircle className="w-4 h-4" />
+            Ai întrebări?
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+            Întrebări
+            <br />
+            <span className="text-primary">frecvente</span>
+          </h2>
+        </div>
+
+        <Accordion type="single" collapsible className="space-y-5">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-2xl border border-border/50 px-6 overflow-hidden data-[state=open]:border-primary/30 transition-colors">
-              <AccordionTrigger className="text-left text-lg font-bold hover:no-underline py-6">{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">{faq.answer}</AccordionContent>
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="group bg-card rounded-3xl border-2 border-border/50 px-8 overflow-hidden data-[state=open]:border-primary/40 data-[state=open]:shadow-xl data-[state=open]:shadow-primary/10 transition-all duration-300 hover:border-primary/30"
+            >
+              <AccordionTrigger className="text-left text-xl font-bold hover:no-underline py-8 group-data-[state=open]:text-primary transition-colors">
+                <div className="flex items-center gap-4">
+                  <span className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-black text-lg flex-shrink-0 group-data-[state=open]:bg-primary group-data-[state=open]:text-primary-foreground transition-colors">
+                    {index + 1}
+                  </span>
+                  <span>{faq.question}</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-lg leading-relaxed pb-8 pl-14">
+                {faq.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
