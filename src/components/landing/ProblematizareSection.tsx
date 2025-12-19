@@ -62,26 +62,59 @@ const ProblematizareSection = () => {
           ))}
         </div>
 
-        {/* Call to action */}
+        {/* Call to action - WOW Card */}
         <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 rounded-3xl p-10 md:p-14 border border-primary/20">
-            <p className="text-2xl md:text-3xl font-black text-foreground mb-10 leading-relaxed">
-              Dacă te-ai regăsit în măcar 2 din aceste situații,
-              <br />
-              <span className="text-primary">atunci acest webinar este pentru tine.</span>
-            </p>
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl"></div>
-              <Button
-                asChild
-                size="lg"
-                className="relative group px-12 py-8 text-xl font-black rounded-full shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
-              >
-                <a href={CTA_LINK}>
-                  Înscrie-te GRATUIT
-                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                </a>
-              </Button>
+          <div className="relative group">
+            {/* Animated gradient border */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple-500 to-primary rounded-3xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
+            
+            {/* Main card */}
+            <div className="relative bg-gradient-to-br from-background via-card to-background rounded-3xl p-10 md:p-16 border border-primary/30 overflow-hidden">
+              {/* Floating decorations */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+              
+              {/* Sparkle decorations */}
+              <div className="absolute top-8 left-8 w-3 h-3 bg-primary rounded-full animate-ping"></div>
+              <div className="absolute top-12 right-12 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute bottom-10 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-5 py-2 rounded-full text-sm font-bold mb-8 border border-primary/30">
+                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                  LOCURI LIMITATE
+                </div>
+                
+                <p className="text-2xl md:text-4xl font-black text-foreground mb-4 leading-tight">
+                  Dacă te-ai regăsit în măcar 2 din aceste situații,
+                </p>
+                <p className="text-3xl md:text-5xl font-black bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent mb-12">
+                  atunci acest webinar este pentru tine.
+                </p>
+                
+                {/* CTA Button */}
+                <div className="relative inline-block">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-500 rounded-full blur-xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="relative px-14 py-8 text-xl font-black rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-500 shadow-2xl shadow-primary/40 transition-all duration-300 hover:scale-110 border-0"
+                  >
+                    <a href={CTA_LINK} className="flex items-center gap-3">
+                      Înscrie-te GRATUIT
+                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                    </a>
+                  </Button>
+                </div>
+                
+                {/* Trust indicator */}
+                <p className="mt-8 text-muted-foreground text-sm">
+                  ✓ Acces gratuit • ✓ Fără obligații • ✓ Înregistrare disponibilă
+                </p>
+              </div>
             </div>
           </div>
         </div>
