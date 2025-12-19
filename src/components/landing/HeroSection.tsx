@@ -35,7 +35,7 @@ const HeroSection = () => {
 
         {/* Main headline with dramatic styling */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight font-sans">
-          <span className="block bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-sm">Cum crești în criză Blea:</span>
+          <span className="block bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-sm">Cum crești în criză:</span>
           <span className="block text-foreground mt-2">
             12 Skill-uri care te vor
           </span>
