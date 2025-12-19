@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Gift, Sparkles, ArrowRight, Star, Zap, TrendingUp, Clock } from "lucide-react";
 import { CTA_LINK, WEBINAR_DATE } from "@/lib/constants";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex flex-col justify-center py-20 px-4 md:px-8 overflow-hidden">
+  return <section className="relative min-h-screen flex flex-col justify-center py-20 px-4 md:px-8 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse"></div>
@@ -36,7 +34,7 @@ const HeroSection = () => {
         </div>
 
         {/* Main headline with dramatic styling */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight font-sans">
           <span className="block bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-sm">
             Cum crești în criză:
           </span>
@@ -49,7 +47,7 @@ const HeroSection = () => {
               <span className="relative text-primary">
                 2026
                 <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
-                  <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" className="text-primary/40"/>
+                  <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" className="text-primary/40" />
                 </svg>
               </span>
             </span>
@@ -74,11 +72,7 @@ const HeroSection = () => {
         <div className="mb-16">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-primary/40 rounded-full blur-2xl animate-pulse"></div>
-            <Button
-              asChild
-              size="lg"
-              className="relative group px-12 py-8 text-xl md:text-2xl font-black rounded-full shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all duration-500 hover:scale-110"
-            >
+            <Button asChild size="lg" className="relative group px-12 py-8 text-xl md:text-2xl font-black rounded-full shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all duration-500 hover:scale-110">
               <a href={CTA_LINK}>
                 Înscrie-te GRATUIT
                 <ArrowRight className="ml-3 w-7 h-7 group-hover:translate-x-2 transition-transform duration-300" />
@@ -118,8 +112,6 @@ const HeroSection = () => {
           <p className="text-sm text-muted-foreground mt-3">Derulează pentru mai multe</p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
