@@ -1,3 +1,4 @@
+import { HelpCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -30,14 +31,25 @@ const faqItems = [
 
 const FAQSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8">
-      <div className="max-w-3xl mx-auto">
+    <section className="relative py-24 md:py-32 px-4 md:px-8 overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+
+      <div className="relative max-w-3xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <HelpCircle className="w-4 h-4" />
             Întrebări frecvente
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            Ai{" "}
+            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              întrebări?
+            </span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
             Răspunsuri la cele mai comune întrebări despre webinar.
           </p>
         </div>
@@ -48,12 +60,17 @@ const FAQSection = () => {
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-primary/30"
+              className="group bg-card/80 backdrop-blur-sm border border-border rounded-2xl px-8 overflow-hidden data-[state=open]:border-primary/30 data-[state=open]:shadow-lg data-[state=open]:shadow-primary/5 transition-all duration-300"
             >
-              <AccordionTrigger className="text-left text-foreground font-medium hover:no-underline py-5">
-                {item.question}
+              <AccordionTrigger className="text-left text-foreground font-semibold text-lg hover:no-underline py-6 group-hover:text-primary transition-colors">
+                <span className="flex items-center gap-4">
+                  <span className="shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-sm font-bold group-data-[state=open]:bg-primary group-data-[state=open]:text-primary-foreground transition-colors">
+                    {index + 1}
+                  </span>
+                  {item.question}
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5">
+              <AccordionContent className="text-muted-foreground text-lg pb-6 pl-12 leading-relaxed">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

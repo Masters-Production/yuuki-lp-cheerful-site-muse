@@ -27,33 +27,57 @@ const painPoints = [
 
 const ProblematizareSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8 bg-card">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-24 md:py-32 px-4 md:px-8 bg-card overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
+        backgroundSize: '60px 60px'
+      }} />
+
+      <div className="relative max-w-5xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Te recunoști în aceste situații?
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 bg-destructive/10 text-destructive rounded-full text-sm font-medium mb-6 animate-fade-in">
+            ✗ Provocări comune
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            Te recunoști în{" "}
+            <span className="bg-gradient-to-r from-destructive to-destructive/70 bg-clip-text text-transparent">
+              aceste situații?
+            </span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Dacă da, nu ești singur. Acestea sunt provocările cu care se confruntă mii de profesioniști și antreprenori.
           </p>
         </div>
 
         {/* Pain Points Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
           {painPoints.map((point, index) => (
             <div 
               key={index}
-              className="bg-background border border-border rounded-xl p-6 flex gap-4 hover:shadow-md transition-shadow"
+              className="group relative bg-background/80 backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-destructive/30 hover:shadow-xl hover:shadow-destructive/5 transition-all duration-300"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="shrink-0">
-                <div className="w-10 h-10 bg-destructive/10 rounded-full flex items-center justify-center">
-                  <X className="w-5 h-5 text-destructive" />
+              {/* Hover Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative flex gap-5">
+                <div className="shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-destructive/20 to-destructive/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <X className="w-6 h-6 text-destructive" />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">{point.title}</h3>
-                <p className="text-muted-foreground text-sm">{point.description}</p>
+                <div>
+                  <h3 className="font-bold text-foreground text-lg mb-2 group-hover:text-destructive transition-colors">
+                    {point.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -61,14 +85,21 @@ const ProblematizareSection = () => {
 
         {/* Transition Message */}
         <div className="text-center">
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8 inline-block max-w-2xl">
-            <p className="text-lg text-foreground">
-              <strong>Dacă te-ai regăsit în măcar 2 din situațiile de mai sus</strong>, acest webinar 
-              îți va oferi soluțiile practice de care ai nevoie pentru a schimba direcția.
-            </p>
+          <div className="relative inline-block mb-10">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 blur-2xl" />
+            <div className="relative bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-8 max-w-3xl">
+              <p className="text-xl md:text-2xl text-foreground leading-relaxed">
+                <strong className="text-primary">Dacă te-ai regăsit în măcar 2 din situațiile de mai sus</strong>, 
+                acest webinar îți va oferi soluțiile practice de care ai nevoie pentru a schimba direcția.
+              </p>
+            </div>
           </div>
 
-          <Button asChild size="lg" className="text-lg px-8 py-6 h-auto">
+          <Button 
+            asChild 
+            size="lg" 
+            className="text-lg px-10 py-7 h-auto rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300"
+          >
             <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
               Vreau să învăț soluțiile →
             </a>
