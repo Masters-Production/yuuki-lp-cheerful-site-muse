@@ -1,4 +1,5 @@
 import { Quote, Star, Award, Users, Heart } from "lucide-react";
+import axeniaPhoto from "@/assets/axenia-photo.webp";
 
 const DespreAxeniaSection = () => {
   return (
@@ -24,22 +25,19 @@ const DespreAxeniaSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Photo placeholder with premium styling */}
+          {/* Photo with premium styling */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-[40px] blur-3xl"></div>
             <div className="relative">
               {/* Decorative frame */}
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-transparent to-primary/20 rounded-[48px]"></div>
               
-              <div className="relative aspect-[3/4] bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 rounded-[40px] flex items-center justify-center border-4 border-primary/20 overflow-hidden shadow-2xl">
-                <div className="text-center p-8">
-                  <div className="w-40 h-40 bg-gradient-to-br from-primary/30 to-primary/10 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl border-4 border-primary/20">
-                    <span className="text-7xl">👩‍💼</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                    Adaugă poza Axeniei aici
-                  </p>
-                </div>
+              <div className="relative aspect-[3/4] rounded-[40px] overflow-hidden border-4 border-primary/20 shadow-2xl">
+                <img 
+                  src={axeniaPhoto} 
+                  alt="Axenia Bot - Fondatoarea Yuuki Academy" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               
               {/* Floating badges */}
