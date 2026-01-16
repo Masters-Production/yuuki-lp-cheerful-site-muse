@@ -84,7 +84,7 @@ const HeroSection = () => {
         </div>
 
         {/* Bonus Box with premium styling */}
-        <div className="relative max-w-2xl mx-auto">
+        <div className="relative max-w-3xl mx-auto">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 rounded-3xl blur-2xl animate-pulse"></div>
           <div className="relative bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-xl border-2 border-primary/40 rounded-3xl p-10 shadow-2xl">
             <div className="absolute -top-5 left-1/2 -translate-x-1/2">
@@ -93,11 +93,20 @@ const HeroSection = () => {
                 BONUS EXCLUSIV
               </div>
             </div>
-            <div className="mt-4">
-              <h3 className="text-2xl font-black text-primary mb-3">BONUS la înscriere</h3>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                <span className="font-bold">Adevărul despre 2026:</span> Mini-evaluare de 10 minute care îți arată exact unde ești și ce vine
-              </p>
+            <div className="mt-4 flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <img 
+                  src="/assets/mockup_bonus_yuuki.png" 
+                  alt="Planul Tău de Start 2026 - Workbook Bonus" 
+                  className="w-48 md:w-56 h-auto drop-shadow-2xl"
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-black text-primary mb-3">BONUS la înscriere</h3>
+                <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                  <span className="font-bold">Adevărul despre 2026:</span> Mini-evaluare de 10 minute care îți arată exact unde ești și ce vine
+                </p>
+              </div>
             </div>
           </div>
         </div>
