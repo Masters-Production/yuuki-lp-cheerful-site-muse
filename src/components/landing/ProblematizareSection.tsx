@@ -101,7 +101,7 @@ const ProblematizareSection = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="relative px-14 py-8 text-xl font-black rounded-full bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/40 transition-all duration-300 hover:scale-110 border-0"
+                    className="relative px-8 py-5 md:px-14 md:py-8 text-lg md:text-xl font-black rounded-full bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/40 transition-all duration-300 hover:scale-110 border-0"
                   >
                     <a href={getCTALink()} className="flex items-center gap-3">
                       Înscrie-te GRATUIT
