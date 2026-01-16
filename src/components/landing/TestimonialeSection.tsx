@@ -51,20 +51,20 @@ const TestimonialeSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
-              className="group relative bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 h-fit"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Hover Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
               
               <img 
                 src={testimonial.image}
                 alt={`Testimonial ${testimonial.id}`}
-                className="w-full h-auto object-contain"
+                className="w-full h-auto block"
               />
 
               {/* Corner Decoration */}
