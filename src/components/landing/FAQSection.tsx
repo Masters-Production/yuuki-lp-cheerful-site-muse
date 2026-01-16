@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { HelpCircle } from "lucide-react";
 
 const faqs = [
-  { question: "Când are loc webinarul?", answer: "Pe 25 decembrie 2025, între orele 19:00 și 21:00. Durează aproximativ 2 ore și este complet LIVE." },
+  { question: "Când are loc webinarul?", answer: "Pe 20 ianuarie 2026, între orele 19:00 și 21:00. Durează aproximativ 2 ore și este complet LIVE." },
   { question: "Cum primesc link-ul de acces?", answer: "Imediat după înscriere vei primi email de confirmare cu link-ul de acces. Vei primi și notificări pe 24 decembrie și în ziua webinarului." },
   { question: "Va fi înregistrare?", answer: "Da, dacă te înscrii dar nu poți participa LIVE, vei primi înregistrarea. Însă recomandăm participarea LIVE pentru a profita de energia evenimentului și a pune întrebări." },
   { question: "Pot participa de pe telefon?", answer: "Da. Webinarul e online, poți participa de pe orice device, laptop, tabletă, telefon. Recomand însă laptop/tabletă pentru experiență optimă, mai ușor să iei notițe, să vezi slide-urile." },
