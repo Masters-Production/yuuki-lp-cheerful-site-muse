@@ -66,18 +66,18 @@ const ProblematizareSection = () => {
         <div className="mt-20 text-center">
           <div className="relative group">
             {/* Animated gradient border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple-500 to-primary rounded-3xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-primary/80 to-primary rounded-3xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
             
             {/* Main card */}
             <div className="relative bg-gradient-to-br from-background via-card to-background rounded-3xl p-10 md:p-16 border border-primary/30 overflow-hidden">
               {/* Floating decorations */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/15 rounded-full blur-3xl"></div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
               
               {/* Sparkle decorations */}
               <div className="absolute top-8 left-8 w-3 h-3 bg-primary rounded-full animate-ping"></div>
-              <div className="absolute top-12 right-12 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute top-12 right-12 w-2 h-2 bg-primary/70 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
               <div className="absolute bottom-10 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
               
               {/* Content */}
@@ -91,17 +91,17 @@ const ProblematizareSection = () => {
                 <p className="text-2xl md:text-4xl font-black text-foreground mb-4 leading-tight">
                   Dacă te-ai regăsit în măcar 2 din aceste situații,
                 </p>
-                <p className="text-3xl md:text-5xl font-black bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent mb-12">
+                <p className="text-3xl md:text-5xl font-black text-primary mb-12">
                   atunci acest webinar este pentru tine.
                 </p>
                 
                 {/* CTA Button */}
                 <div className="relative inline-block">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-500 rounded-full blur-xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
                   <Button
                     asChild
                     size="lg"
-                    className="relative px-14 py-8 text-xl font-black rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-500 shadow-2xl shadow-primary/40 transition-all duration-300 hover:scale-110 border-0"
+                    className="relative px-14 py-8 text-xl font-black rounded-full bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/40 transition-all duration-300 hover:scale-110 border-0"
                   >
                     <a href={getCTALink()} className="flex items-center gap-3">
                       Înscrie-te GRATUIT
