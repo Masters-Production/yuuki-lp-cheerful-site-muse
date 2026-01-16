@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Lightbulb, AlertTriangle, Award, Target, Map, BookOpen, ArrowRight, Sparkles } from "lucide-react";
-import { CTA_LINK } from "@/lib/constants";
+import { getCTALink } from "@/lib/constants";
 
 const benefits = [
   { icon: Lightbulb, title: "De ce unii muncesc enorm și tot nu avansează", description: "Iluzia progresului: ce abilități NU funcționează și de ce îți consumă timpul fără rezultate.", color: "from-amber-500/20 to-orange-500/20" },
@@ -79,7 +79,7 @@ const BeneficiiSection = () => {
               size="lg"
               className="relative group px-12 py-8 text-xl font-black rounded-full shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
             >
-              <a href={CTA_LINK}>
+              <a href={getCTALink()}>
                 Înscrie-te GRATUIT
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </a>

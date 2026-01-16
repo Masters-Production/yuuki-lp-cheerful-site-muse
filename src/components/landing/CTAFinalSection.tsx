@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertTriangle, Zap, TrendingUp, Shield } from "lucide-react";
-import { CTA_LINK, WEBINAR_DATE } from "@/lib/constants";
+import { getCTALink, WEBINAR_DATE } from "@/lib/constants";
 
 const CTAFinalSection = () => {
   return (
@@ -62,7 +62,7 @@ const CTAFinalSection = () => {
             variant="secondary"
             className="relative group px-14 py-10 text-2xl md:text-3xl font-black rounded-full shadow-2xl hover:scale-110 transition-all duration-500"
           >
-            <a href={CTA_LINK}>
+            <a href={getCTALink()}>
               Rezervă-mi locul GRATUIT
               <ArrowRight className="ml-3 w-8 h-8 group-hover:translate-x-2 transition-transform duration-300" />
             </a>

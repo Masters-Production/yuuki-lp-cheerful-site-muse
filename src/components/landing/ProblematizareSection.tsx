@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { X, ArrowRight, AlertCircle } from "lucide-react";
-import { CTA_LINK } from "@/lib/constants";
+import { getCTALink } from "@/lib/constants";
 
 const problems = [
   { title: "Simți că lumea se schimbă prea repede și te temi că vei rămâne în urmă", description: "Tehnologie nouă, AI, automatizare — totul merge atât de rapid încât nu mai știi ce să înveți mai întâi. Te trezești că ce știai acum 2 ani nu mai e suficient." },
@@ -103,7 +103,7 @@ const ProblematizareSection = () => {
                     size="lg"
                     className="relative px-14 py-8 text-xl font-black rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-500 shadow-2xl shadow-primary/40 transition-all duration-300 hover:scale-110 border-0"
                   >
-                    <a href={CTA_LINK} className="flex items-center gap-3">
+                    <a href={getCTALink()} className="flex items-center gap-3">
                       Înscrie-te GRATUIT
                       <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                     </a>
