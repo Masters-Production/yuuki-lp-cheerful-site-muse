@@ -12,9 +12,8 @@ const Footer = () => {
       <div className="relative max-w-5xl mx-auto">
         <div className="text-center space-y-4">
           {/* Logo/Brand */}
-          <div className="inline-flex items-center gap-3 mb-4">
+          <div className="inline-flex items-center justify-center mb-4">
             <img src={yuukiLogo} alt="Yuuki Academy" className="h-10 w-auto" />
-            <span className="font-bold text-xl">Yuuki Academy</span>
           </div>
           
           {/* Copyright */}
