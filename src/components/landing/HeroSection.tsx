@@ -22,10 +22,10 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        {/* Badge with glow effect */}
-        <div className="relative inline-block mb-10">
+        {/* Badge with glow effect - Desktop version */}
+        <div className="relative hidden md:inline-block mb-10">
           <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl"></div>
-          <div className="relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full text-sm md:text-base font-bold shadow-2xl shadow-primary/40">
+          <div className="relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full text-base font-bold shadow-2xl shadow-primary/40">
             <Sparkles className="w-5 h-5 animate-pulse" />
             <span>Webinar LIVE GRATUIT</span>
             <span className="w-1.5 h-1.5 bg-primary-foreground/60 rounded-full"></span>
@@ -33,8 +33,25 @@ const HeroSection = () => {
           </div>
         </div>
 
+        {/* Badge - Mobile version (2 badges stacked) */}
+        <div className="flex md:hidden flex-col items-center gap-3 mb-8">
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl"></div>
+            <div className="relative inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-full text-sm font-bold shadow-xl shadow-primary/40">
+              <Sparkles className="w-4 h-4 animate-pulse" />
+              <span>Webinar LIVE GRATUIT</span>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg"></div>
+            <div className="relative inline-flex items-center gap-2 px-5 py-2.5 bg-primary/90 text-primary-foreground rounded-full text-sm font-bold shadow-lg">
+              <span>{WEBINAR_DATE}</span>
+            </div>
+          </div>
+        </div>
+
         {/* Main headline with dramatic styling */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight font-sans">
+        <h1 className="text-3xl md:text-7xl lg:text-8xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tight font-sans">
           <span className="block bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-sm">Cum crești în criză:</span>
           <span className="block text-foreground mt-2">
             12 Skill-uri care te vor
