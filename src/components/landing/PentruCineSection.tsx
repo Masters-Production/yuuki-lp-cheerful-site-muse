@@ -1,24 +1,8 @@
 import { Check, X, UserCheck, UserX } from "lucide-react";
-
-const forYou = [
-  "Vrei să crești profesional și financiar în 2026",
-  "Ai potențial dar nu știi ce să înveți și unde să investești pentru rezultate reale",
-  "Te-ai săturat de dezvoltare personală și spirituală fără progres real și schimbări dorite în viața ta",
-  "Nu vrei să fii în surprindere de schimbări și criză.",
-  "Ești gata să investești timp și efort în dezvoltarea ta"
-];
-
-const notForYou = [
-  "Cauți soluții rapide și magice. Nu există așa ceva fără consecințe și mai grave ulterior",
-  "Ești ok cu locul în care ești și problemele care le ai",
-  "Vrei doar inspirație fără implementare. Aici vorbim despre acțiune și rezultate.",
-  "Dacă nu simți nevoia să crești profesional, financiar, personal",
-  "Dacă nu poți fi în live la webinar pe 25 decembrie, mai bine nu te înscrii."
-];
-
+const forYou = ["Vrei să crești profesional și financiar în 2026", "Ai potențial dar nu știi ce să înveți și unde să investești pentru rezultate reale", "Te-ai săturat de dezvoltare personală și spirituală fără progres real și schimbări dorite în viața ta", "Nu vrei să fii în surprindere de schimbări și criză.", "Ești gata să investești timp și efort în dezvoltarea ta"];
+const notForYou = ["Cauți soluții rapide și magice. Nu există așa ceva fără consecințe și mai grave ulterior", "Ești ok cu locul în care ești și problemele care le ai", "Vrei doar inspirație fără implementare. Aici vorbim despre acțiune și rezultate.", "Dacă nu simți nevoia să crești profesional, financiar, personal", "Dacă nu poți fi în live la webinar pe 25 decembrie, mai bine nu te înscrii."];
 const PentruCineSection = () => {
-  return (
-    <section className="relative py-28 md:py-36 px-4 md:px-8 overflow-hidden">
+  return <section className="relative py-28 md:py-36 px-4 md:px-8 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2"></div>
@@ -46,22 +30,18 @@ const PentruCineSection = () => {
                   <UserCheck className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <span className="text-primary font-bold text-lg">✅ DA</span>
-                  <h3 className="text-2xl md:text-3xl font-black text-foreground">
-                    PENTRU TINE DACĂ:
-                  </h3>
+                  <span className="text-primary font-bold text-lg"></span>
+                  <h3 className="text-2xl md:text-3xl font-black text-foreground">ESTE PENTRU TINE DACĂ:</h3>
                 </div>
               </div>
               
               <ul className="space-y-5">
-                {forYou.map((item, index) => (
-                  <li key={index} className="flex gap-4 group/item">
+                {forYou.map((item, index) => <li key={index} className="flex gap-4 group/item">
                     <div className="flex-shrink-0 w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mt-0.5 group-hover/item:bg-primary/30 transition-colors">
                       <Check className="w-5 h-5 text-primary" strokeWidth={3} />
                     </div>
                     <span className="text-foreground text-lg leading-relaxed">{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
           </div>
@@ -84,21 +64,17 @@ const PentruCineSection = () => {
               </div>
               
               <ul className="space-y-5">
-                {notForYou.map((item, index) => (
-                  <li key={index} className="flex gap-4 group/item">
+                {notForYou.map((item, index) => <li key={index} className="flex gap-4 group/item">
                     <div className="flex-shrink-0 w-8 h-8 bg-destructive/20 rounded-full flex items-center justify-center mt-0.5 group-hover/item:bg-destructive/30 transition-colors">
                       <X className="w-5 h-5 text-destructive" strokeWidth={3} />
                     </div>
                     <span className="text-foreground text-lg leading-relaxed">{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PentruCineSection;
