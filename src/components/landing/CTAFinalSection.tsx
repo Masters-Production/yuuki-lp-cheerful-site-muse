@@ -41,7 +41,7 @@ const CTAFinalSection = () => {
         </div>
 
         {/* Final message */}
-        <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-14 leading-tight">
+        <h2 className="text-2xl md:text-5xl lg:text-7xl font-black mb-14 leading-tight">
           Devină persoana care
           <br />
           face față{" "}
