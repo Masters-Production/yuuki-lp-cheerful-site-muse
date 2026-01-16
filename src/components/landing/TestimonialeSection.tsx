@@ -51,11 +51,11 @@ const TestimonialeSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
-              className="group relative bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 h-fit"
+              className="group relative bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 break-inside-avoid"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Hover Gradient */}
