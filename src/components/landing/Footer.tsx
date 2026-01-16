@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import yuukiLogo from "@/assets/yuuki-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,16 +12,14 @@ const Footer = () => {
       <div className="relative max-w-5xl mx-auto">
         <div className="text-center space-y-4">
           {/* Logo/Brand */}
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">A</span>
-            </div>
-            <span className="font-bold text-xl">Axenia Bot</span>
+          <div className="inline-flex items-center gap-3 mb-4">
+            <img src={yuukiLogo} alt="Yuuki Academy" className="h-10 w-auto" />
+            <span className="font-bold text-xl">Yuuki Academy</span>
           </div>
           
           {/* Copyright */}
           <p className="text-sm opacity-80">
-            © {currentYear} Axenia Bot. Toate drepturile rezervate.
+            © {currentYear} Yuuki Academy. Toate drepturile rezervate.
           </p>
           
           {/* Subtext */}
