@@ -100,7 +100,7 @@ const HeroSection = () => {
                   <Gift className="w-5 h-5" />
                   BONUS EXCLUSIV
                 </div>
-                <h3 className="text-2xl font-black text-primary mb-3">BONUS la înscriere</h3>
+                <h3 className="text-2xl font-black text-primary mb-3">După înscriere primești:</h3>
                 <p className="text-lg md:text-xl text-foreground leading-relaxed">
                   <span className="font-bold">Adevărul despre 2026:</span> Mini-evaluare de 10 minute care îți arată exact unde ești și ce vine
                 </p>
