@@ -77,7 +77,7 @@ const BeneficiiSection = () => {
             <Button
               asChild
               size="lg"
-              className="relative group px-12 py-8 text-xl font-black rounded-full shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+              className="relative group px-8 py-5 md:px-12 md:py-8 text-lg md:text-xl font-black rounded-full shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
             >
               <a href={getCTALink()}>
                 Înscrie-te GRATUIT

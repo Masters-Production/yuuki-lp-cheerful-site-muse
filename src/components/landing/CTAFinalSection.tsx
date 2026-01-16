@@ -60,7 +60,7 @@ const CTAFinalSection = () => {
             asChild
             size="lg"
             variant="secondary"
-            className="relative group px-14 py-10 text-2xl md:text-3xl font-black rounded-full shadow-2xl hover:scale-110 transition-all duration-500"
+            className="relative group px-8 py-6 md:px-14 md:py-10 text-xl md:text-3xl font-black rounded-full shadow-2xl hover:scale-110 transition-all duration-500"
           >
             <a href={getCTALink()}>
               Rezervă-mi locul GRATUIT
