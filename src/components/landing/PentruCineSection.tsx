@@ -57,7 +57,7 @@ const PentruCineSection = () => {
                 </div>
                 <div>
                   <span className="text-destructive font-bold text-lg"></span>
-                  <h3 className="text-2xl md:text-3xl font-black text-foreground">
+                  <h3 className="text-2xl md:text-3xl font-black text-destructive">
                     NU ESTE PENTRU TINE DACĂ:
                   </h3>
                 </div>
