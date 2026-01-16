@@ -1,5 +1,5 @@
 // CTA Link - Registration link
-export const CTA_LINK = "https://yuuki.training/lectorium_reg_zap0801";
+export const CTA_LINK = "https://yuuki.training/skills_pentru_2026_reg";
 
 // Function to get CTA link with UTM parameters and partner code
 export const getCTALink = (): string => {
