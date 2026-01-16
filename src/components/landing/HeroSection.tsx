@@ -87,13 +87,7 @@ const HeroSection = () => {
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 rounded-3xl blur-2xl animate-pulse"></div>
           <div className="relative bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-xl border-2 border-primary/40 rounded-3xl p-10 shadow-2xl">
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-              <div className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
-                <Gift className="w-5 h-5" />
-                BONUS EXCLUSIV
-              </div>
-            </div>
-            <div className="mt-4 flex flex-col md:flex-row items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img 
                   src="/assets/mockup_bonus_yuuki.png" 
@@ -102,6 +96,10 @@ const HeroSection = () => {
                 />
               </div>
               <div className="text-center md:text-left">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary via-primary to-primary/80 text-primary-foreground px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30 mb-4 animate-pulse">
+                  <Gift className="w-5 h-5" />
+                  BONUS EXCLUSIV
+                </div>
                 <h3 className="text-2xl font-black text-primary mb-3">BONUS la înscriere</h3>
                 <p className="text-lg md:text-xl text-foreground leading-relaxed">
                   <span className="font-bold">Adevărul despre 2026:</span> Mini-evaluare de 10 minute care îți arată exact unde ești și ce vine
