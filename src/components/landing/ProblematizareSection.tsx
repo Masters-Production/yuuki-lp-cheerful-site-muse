@@ -45,9 +45,9 @@ const ProblematizareSection = () => {
                 {index + 1}
               </div>
               
-              <div className="flex gap-5 md:gap-8">
-                <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-destructive/20 to-destructive/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-destructive/10">
-                  <X className="w-7 h-7 md:w-8 md:h-8 text-destructive" strokeWidth={3} />
+              <div className="flex gap-4 md:gap-8">
+                <div className="hidden md:flex flex-shrink-0 w-16 h-16 bg-gradient-to-br from-destructive/20 to-destructive/10 rounded-2xl items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-destructive/10">
+                  <X className="w-8 h-8 text-destructive" strokeWidth={3} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-black text-foreground mb-3 leading-tight group-hover:text-destructive/90 transition-colors">
