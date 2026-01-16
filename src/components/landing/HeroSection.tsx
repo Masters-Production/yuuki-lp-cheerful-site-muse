@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Gift, Sparkles, ArrowRight, Star, Zap, TrendingUp, Clock } from "lucide-react";
-import { CTA_LINK, WEBINAR_DATE } from "@/lib/constants";
+import { getCTALink, WEBINAR_DATE } from "@/lib/constants";
 const HeroSection = () => {
   return <section className="relative min-h-screen flex flex-col justify-center py-20 px-4 md:px-8 overflow-hidden">
       {/* Animated background elements */}
@@ -71,7 +71,7 @@ const HeroSection = () => {
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-primary/40 rounded-full blur-2xl animate-pulse"></div>
             <Button asChild size="lg" className="relative group px-12 py-8 text-xl md:text-2xl font-black rounded-full shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all duration-500 hover:scale-110">
-              <a href={CTA_LINK}>
+              <a href={getCTALink()}>
                 Înscrie-te GRATUIT
                 <ArrowRight className="ml-3 w-7 h-7 group-hover:translate-x-2 transition-transform duration-300" />
               </a>
