@@ -1,12 +1,20 @@
 import { MessageSquare, Star } from "lucide-react";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.png";
+import testimonial3 from "@/assets/testimonial-3.png";
+import testimonial4 from "@/assets/testimonial-4.png";
+import testimonial5 from "@/assets/testimonial-5.png";
+import testimonial6 from "@/assets/testimonial-6.png";
+import testimonial7 from "@/assets/testimonial-7.png";
 
-const testimonialePlaceholder = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
-  { id: 4 },
-  { id: 5 },
-  { id: 6 }
+const testimonials = [
+  { id: 1, image: testimonial1 },
+  { id: 2, image: testimonial2 },
+  { id: 3, image: testimonial3 },
+  { id: 4, image: testimonial4 },
+  { id: 5, image: testimonial5 },
+  { id: 6, image: testimonial6 },
+  { id: 7, image: testimonial7 },
 ];
 
 const TestimonialeSection = () => {
@@ -42,55 +50,31 @@ const TestimonialeSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid - Placeholders */}
+        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonialePlaceholder.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
-              className="group relative bg-background/80 backdrop-blur-sm border border-border rounded-2xl overflow-hidden aspect-[4/3] hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Hover Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
               
-              {/* PLACEHOLDER: Înlocuiește cu imagine testimonial
               <img 
-                src={`/path/to/testimonial-${testimonial.id}.jpg`}
+                src={testimonial.image}
                 alt={`Testimonial ${testimonial.id}`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
               />
-              */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <MessageSquare className="w-10 h-10 text-primary/50" />
-                  </div>
-                  <p className="text-muted-foreground font-medium">
-                    Testimonial #{testimonial.id}
-                  </p>
-                  <p className="text-xs text-muted-foreground/60 mt-2">
-                    (Încarcă screenshot aici)
-                  </p>
-                </div>
-              </div>
 
               {/* Corner Decoration */}
-              <div className="absolute top-4 right-4 flex gap-1">
+              <div className="absolute top-3 right-3 flex gap-1 z-20">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 text-primary/30 fill-primary/30" />
+                  <Star key={i} className="w-3 h-3 text-primary fill-primary" />
                 ))}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Instructions for replacing */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-muted/50 rounded-full border border-border">
-            <span className="text-sm text-muted-foreground">
-              📝 Pentru a înlocui: editează TestimonialeSection.tsx și adaugă căile către imagini
-            </span>
-          </div>
         </div>
       </div>
     </section>
