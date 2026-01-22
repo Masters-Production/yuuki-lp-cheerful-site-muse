@@ -1,9 +1,10 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HelpCircle } from "lucide-react";
+import { getTomorrowDate, getDayBeforeTomorrow } from "@/lib/constants";
 
-const faqs = [
-  { question: "Când are loc webinarul?", answer: "Pe 20 ianuarie 2026, între orele 19:00 și 21:00. Durează aproximativ 2 ore și este complet LIVE." },
-  { question: "Cum primesc link-ul de acces?", answer: "Imediat după înscriere vei primi email de confirmare cu link-ul de acces. Vei primi și notificări pe 19 ianuarie și în ziua webinarului." },
+const getFaqs = () => [
+  { question: "Când are loc webinarul?", answer: `Pe ${getTomorrowDate()}, între orele 19:00 și 21:00. Durează aproximativ 2 ore și este complet LIVE.` },
+  { question: "Cum primesc link-ul de acces?", answer: `Imediat după înscriere vei primi email de confirmare cu link-ul de acces. Vei primi și notificări pe ${getDayBeforeTomorrow()} și în ziua webinarului.` },
   { question: "Va fi înregistrare?", answer: "Da, dacă te înscrii dar nu poți participa LIVE, vei primi înregistrarea. Însă recomandăm participarea LIVE pentru a profita de energia evenimentului și a pune întrebări." },
   { question: "Pot participa de pe telefon?", answer: "Da. Webinarul e online, poți participa de pe orice device, laptop, tabletă, telefon. Recomand însă laptop/tabletă pentru experiență optimă, mai ușor să iei notițe, să vezi slide-urile." },
   { question: "Va fi vândut ceva la final?", answer: "Da la final voi prezenta setul de programe \"12 Luni – 12 Skilluri\" — un an în care te reconstruiești fundamental. 12 programe care lunar îți dezvoltă câte un skill de neînlocuit. Dacă simți că e pentru tine, te poți înscrie. Dacă nu, rămâi cu ceea ce ai învățat în webinar care e valoros în sine. NU îți vând ceva de ce nu ai nevoie. Te ajut să-ți realizezi obiectivele prin ghidare." }
@@ -33,7 +34,7 @@ const FAQSection = () => {
         </div>
 
         <Accordion type="single" collapsible className="space-y-5">
-          {faqs.map((faq, index) => (
+          {getFaqs().map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}

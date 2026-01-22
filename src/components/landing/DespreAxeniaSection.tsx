@@ -1,5 +1,6 @@
 import { Quote, Star, Award, Users, Heart } from "lucide-react";
 import axeniaPhoto from "@/assets/axenia-photo.webp";
+import { getTomorrowDateShort } from "@/lib/constants";
 
 const DespreAxeniaSection = () => {
   return (
@@ -85,7 +86,7 @@ const DespreAxeniaSection = () => {
               <div className="relative bg-card border-2 border-primary/20 rounded-3xl p-8 shadow-xl">
                 <Quote className="w-12 h-12 text-primary/30 absolute -top-4 -left-4" />
                 <p className="text-foreground text-lg italic leading-relaxed pl-4">
-                  "Nu cred în dezvoltare personală care te face să te simți bine dar nu îți schimbă viața ori terapie de dragul terapiei. Cred în abilități practice care produc rezultate concrete și vizibile — mai mulți bani, relații sănătoase, stare de bine, încredere, siguranță. <span className="font-bold text-primary">Asta vei primi pe 25 decembrie.</span>"
+                  "Nu cred în dezvoltare personală care te face să te simți bine dar nu îți schimbă viața ori terapie de dragul terapiei. Cred în abilități practice care produc rezultate concrete și vizibile — mai mulți bani, relații sănătoase, stare de bine, încredere, siguranță. <span className="font-bold text-primary">Asta vei primi pe {getTomorrowDateShort()}.</span>"
                 </p>
               </div>
             </div>
