@@ -1,3 +1,6 @@
+import { addDays, format } from "date-fns";
+import { ro } from "date-fns/locale";
+
 // CTA Link - Registration link
 export const CTA_LINK = "https://yuuki.training/skills_pentru_2026_reg";
 
@@ -29,7 +32,22 @@ export const getCTALink = (): string => {
   return queryString ? `${baseUrl}?${queryString}` : baseUrl;
 };
 
+// Dynamic date functions - always returns tomorrow's date
+export const getTomorrowDate = (): string => {
+  const tomorrow = addDays(new Date(), 1);
+  return format(tomorrow, "d MMMM yyyy", { locale: ro });
+};
+
+export const getTomorrowDateShort = (): string => {
+  const tomorrow = addDays(new Date(), 1);
+  return format(tomorrow, "d MMMM", { locale: ro });
+};
+
+export const getDayBeforeTomorrow = (): string => {
+  return format(new Date(), "d MMMM", { locale: ro });
+};
+
 // Webinar details
-export const WEBINAR_DATE = "20 Ianuarie 2026";
+export const WEBINAR_DATE = getTomorrowDate();
 export const WEBINAR_TIME = "19:00";
 export const WEBINAR_DURATION = "2 ore";
